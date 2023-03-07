@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY-WSS-APP</title>
+    </head>
+    <body>
+        <h1>Welcome Websocket ChatApp</h1>
+        <ul>
+            <li id="room-1" name="동물의왕국"><a href="javascript:enterRoom('room-1');">동물의왕국</a></li>
+            <li id="room-2" name="걸어서세계속으로"><a href="javascript:enterRoom('room-2');">걸어서세계속으로</a></li>
+            <li id="room-3" name="무한도전"><a href="javascript:enterRoom('room-3');">무한도전</a></li>
+        </ul>
+        <input type="text" name="userName" id="userName" placeholder="userId"/>
+        <input type="button" value="접속" onclick="javascript:connect();"/>
+        <div id='field' style="border:1px solid;width:400px;min-height:600px;">
+            <!-- content here -->
+        </div>
+        <input type="text" id="msg" name="msg" />
+        <input type="button" value="전송" onclick="javascript:send();"/>
+        <script src="./wss.js"></script>
+    </body>
+</html>
